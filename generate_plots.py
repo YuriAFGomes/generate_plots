@@ -1,5 +1,4 @@
-import io
-import os
+import json
 
 import pandas as pd
 import numpy as np
@@ -12,7 +11,6 @@ def prepare_data(filename):
     data=pd.read_csv(
     filename,
     low_memory=False,
-    nrows=1000,
     on_bad_lines = "skip"
     )
 
@@ -105,6 +103,9 @@ def generate_plots(file,save_dir):
     data = prepare_data(file)
 
     districts_and_services = get_districts_and_services(data)
+
+    with open(f"{save_dir}/districts_and_services.json",'w',encoding='utf-8') as f:
+        json.dump(districts_and_services,f)
 
     for district in districts_and_services['districts']:
         for service in districts_and_services['services']:
