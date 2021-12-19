@@ -85,16 +85,20 @@ def plotit(data,district,service,save_path):
     m2=int(rslt_df['dvt'].max())
     m3=int(rslt_df['dvt'].mean())
     text = [
-    f"Total Applications : {a1}",
-    f"Minimum Disposal time : {m1} days",
-    f"Maximum Disposal time : {m2} days",
-    f"Mean Disposal time : {m3} days",
-    f"%  of applications Exceeding timeline : {p1} %"
+        f"Total Applications : {a1}",
+        f"Minimum Disposal time : {m1} days",
+        f"Maximum Disposal time : {m2} days",
+        f"Mean Disposal time : {m3} days",
+        f"%  of applications Exceeding timeline : {p1} %"
     ]
     ax.plot([2], [1], 'o')
 
-    filename = f"{district}-{service}.png"
-    plt.savefig(save_path+"/"+filename,format='png',bbox_inches="tight",dpi=150)
+    filename = f"{district}-{service}"
+    plt.savefig(f"{save_path}/{filename}.png",format='png',bbox_inches="tight",dpi=150)
+
+    with open(f"{save_path}/{filename}.txt",'w') as f:
+        for line in text:
+            f.write(line+'\n')
 
 def generate_plots(file,save_dir):
     combinations = set()
