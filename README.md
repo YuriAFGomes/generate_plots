@@ -4,7 +4,7 @@
 *Requirements*
 
 
-Python installed on your computer
+Python (version>=3.9) installed on your computer
 
 
 *Step-by-step*
