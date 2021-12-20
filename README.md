@@ -14,4 +14,4 @@ Python (version>=3.9) installed on your computer
 4. Run "venv\Scripts\activate" (Windows) or "venv/bin/activate" (Mac,Linux)
 5. Run "python -m pip install -r requirements.txt"
 6. Run "python main.py"
-7. User the graphical interface that will pop up
+7. Use the graphical interface that will pop up
