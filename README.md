@@ -1,6 +1,12 @@
 ***Instructions***
+
+
 *Requirements*
+
+
 Python installed on your computer
+
+
 *Step-by-step*
 1. Download this repository as zip and extract the contents to an empty folder
 2. Open terminal (Mac,Linux) or CMD (Windows)
